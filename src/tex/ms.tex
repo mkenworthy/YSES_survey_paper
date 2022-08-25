@@ -5,8 +5,10 @@
 %\documentclass{aa}
 \usepackage{txfonts}
 \usepackage{natbib}
-
+\usepackage{lscape} % for the rotated longtable
 \usepackage{graphicx}
+
+\usepackage{lipsum}  
 
 \usepackage{color}
 \usepackage{hyperref}
@@ -86,19 +88,29 @@ Selecting stars from Pecaut XXXX and selecting for mass, distance and proper mot
 
 Strategy was two images in two filters with IRDIS, wait for a while, then take another image later on.
 
+\lipsum[2-8]
+
 \section{Observations and data reduction}\label{sec:obs}
+\lipsum[2-8]
 
 \subsection{Using RDI and PCA for halo suppression}
+\lipsum[2-8]
 
 \subsection{Images and detected candidate companions}
+\lipsum[2-8]
 
 \section{Detected circumstellar companions}\label{sec:companions}
+\lipsum[2-8]
 
 TABLE XXXX Detected companion properties
 
+\lipsum[2-8]
+
 \section{Discussion}\label{sec:discuss}
+\lipsum[2-8]
 
 \section{Conclusions}\label{sec:conc}
+\lipsum[2-8]
 
 %\begin{figure}
 %   \centering
@@ -122,5 +134,35 @@ This research made use of Astropy,\footnote{http://www.astropy.org} a community-
 
 \bibliographystyle{aa}
 \bibliography{bib}
+
+
+\longtab{
+\begin{landscape}
+\begin{longtable}{lllrrr}
+\caption{\label{kstars} Sample stars with absolute magnitude}\\
+\hline\hline
+Catalogue& $M_{V}$ & Spectral & Distance & Mode & Count Rate \\
+\hline
+\endfirsthead
+\caption{continued.}\\
+\hline\hline
+Catalogue& $M_{V}$ & Spectral & Distance & Mode & Count Rate \\
+\hline
+\endhead
+\hline
+\endfoot
+%%
+Gl 33    & 6.37 & K2 V & 7.46 & S & 0.043170\\
+Gl 66AB  & 6.26 & K2 V & 8.15 & S & 0.260478\\
+Gl 68    & 5.87 & K1 V & 7.47 & P & 0.026610\\
+         &      &      &      & H & 0.008686\\
+Gl 86
+\footnote{Source not included in the HRI catalog. See Sect.~5.4.2 for details.}
+         & 5.92 & K0 V & 10.91& S & 0.058230\\
+\end{longtable}
+\end{landscape}
+}
+
+
 
 \end{document}
