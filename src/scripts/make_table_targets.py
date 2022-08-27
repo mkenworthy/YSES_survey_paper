@@ -9,13 +9,13 @@ def write_aa_longtable(t, tout='long.tex', capt='Table caption'):
     ascii.write(t[1:],paths.data / 'tmp',overwrite=True,
         Writer=ascii.Latex)
 
-    with open(paths.data/ 'tmp') as f:
+    with open(paths.data / 'tmp') as f:
         lines = f.readlines()
 
     colformat = lines[1][15:].strip() # remove \tabular and get {cclll...}
     colhead = lines[2]
 
-    fh = open(paths.data / tout, 'w')
+    fh = open(paths.output / tout, 'w')
     fh.write(r'\begin{longtable}'+f'{colformat}'+'\n')
     fh.write(r'\caption{'+capt+r'}\\'+'\n')
     fh.write(r'\hline\hline'+'\n')
